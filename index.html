@@ -7,49 +7,60 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <meta name="description"
-content="CelesTium AI builds computer vision infrastructure for Africa, developing intelligent systems for healthcare, transportation, and critical real-world operations." />
 
-<meta name="keywords"
-content="Computer Vision, Artificial Intelligence, Healthcare AI, Malaria Detection, ANPR, Africa AI, CelesTium AI" />
+  <!-- SEO -->
+  <meta name="description" content="CelesTium AI builds computer vision infrastructure that enables intelligent systems to perceive, interpret, and act on the physical world across Africa — developing models, datasets, and deployment technologies for healthcare, transportation, and critical infrastructure." />
+  <meta name="keywords" content="Computer Vision, AI Africa, Healthcare AI, Malaria Detection, ANPR, Dataset Engineering, Medical Imaging, CelesTium AI" />
+  <meta name="author" content="Gabriel Akoleaje" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://gabriel-akoleaje.vercel.app" />
 
-<meta name="author" content="CelesTium AI" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="CelesTium AI — Computer Vision Infrastructure for Africa" />
+  <meta property="og:description" content="Building intelligent perception systems for healthcare, transportation, and critical infrastructure across Africa." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://gabriel-akoleaje.vercel.app/preview-image.jpg" />
+  <meta property="og:url" content="https://gabriel-akoleaje.vercel.app" />
 
-<meta property="og:title"
-content="CelesTium AI — Computer Vision Infrastructure for Africa" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CelesTium AI — Computer Vision Infrastructure for Africa" />
+  <meta name="twitter:description" content="Building intelligent perception systems for healthcare, transportation, and critical infrastructure across Africa." />
 
-<meta property="og:description"
-content="Building intelligent systems for healthcare, transportation, and critical real-world operations." />
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CelesTium AI",
+    "url": "https://gabriel-akoleaje.vercel.app",
+    "description": "African computer vision company building intelligent perception systems for healthcare, transportation, and critical infrastructure.",
+    "founder": { "@type": "Person", "name": "Gabriel Akoleaje" },
+    "foundingLocation": { "@type": "Place", "name": "Lagos, Nigeria" },
+    "areaServed": "Africa"
+  }
+  </script>
 
-<meta property="og:type"
-content="website" />
-
-<meta property="og:image"
-content="https://gabriel-akoleaje.vercel.app/preview-image.jpg" />
-
-<meta property="og:url"
-content="https://gabriel-akoleaje.vercel.app" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy: #0A0F1E;
+      --navy:         #0A0F1E;
       --navy-surface: #111827;
-      --navy-card: #161D2E;
-      --navy-border: #1E2A42;
-      --accent: #3B6FFF;
-      --accent-dim: rgba(59, 111, 255, 0.12);
-      --stone: #C4B99A;
-      --white: #F0EEE9;
-      --white-dim: rgba(240, 238, 233, 0.55);
-      --white-faint: rgba(240, 238, 233, 0.12);
-      --green: #2ECC8A;
+      --navy-card:    #161D2E;
+      --navy-border:  #1E2A42;
+      --accent:       #3B6FFF;
+      --accent-dim:   rgba(59,111,255,0.12);
+      --stone:        #C4B99A;
+      --white:        #F0EEE9;
+      --white-dim:    rgba(240,238,233,0.55);
+      --white-faint:  rgba(240,238,233,0.12);
+      --green:        #2ECC8A;
       --font-display: 'Space Grotesk', sans-serif;
-      --font-body: 'Inter', sans-serif;
+      --font-body:    'Inter', sans-serif;
     }
 
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--navy);
       color: var(--white);
@@ -61,1233 +72,880 @@ content="https://gabriel-akoleaje.vercel.app" />
 
     /* ── NAV ── */
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
       padding: 20px 60px;
-      background: rgba(10, 15, 30, 0.85);
-      backdrop-filter: blur(12px);
+      background: rgba(10,15,30,0.88);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--navy-border);
     }
     .nav-logo {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 1.15rem;
-      letter-spacing: -0.02em;
-      color: var(--white);
-      text-decoration: none;
+      font-family: var(--font-display); font-weight: 700; font-size: 1.15rem;
+      letter-spacing: -0.02em; color: var(--white); text-decoration: none;
     }
     .nav-logo span { color: var(--accent); }
-    .nav-links {
-      display: flex;
-      gap: 36px;
-      list-style: none;
-    }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a {
-      font-family: var(--font-body);
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--white-dim);
-      text-decoration: none;
-      letter-spacing: 0.01em;
-      transition: color 0.2s;
+      font-size: 0.875rem; font-weight: 500; color: var(--white-dim);
+      text-decoration: none; letter-spacing: 0.01em; transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--white); }
     .nav-cta {
-      font-family: var(--font-body);
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--white);
-      background: var(--accent);
-      padding: 10px 22px;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: opacity 0.2s;
+      font-size: 0.875rem; font-weight: 600; color: #fff;
+      background: var(--accent); padding: 10px 22px; border-radius: 6px;
+      text-decoration: none; transition: opacity 0.2s;
     }
     .nav-cta:hover { opacity: 0.85; }
 
-    /* ── SECTIONS ── */
-    section { padding: 100px 60px; }
+    /* ── SHARED ── */
+    section { padding: 108px 60px; }
     .container { max-width: 1100px; margin: 0 auto; }
-
-    /* ── HERO ── */
-    #hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 140px;
-      padding-bottom: 100px;
-      position: relative;
-      overflow: hidden;
+    .section-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.73rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 18px;
     }
-    .hero-grid-bg {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(59,111,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(59,111,255,0.04) 1px, transparent 1px);
-      background-size: 48px 48px;
-      pointer-events: none;
-    }
-    .hero-glow {
-      position: absolute;
-      top: -200px; left: -200px;
-      width: 700px; height: 700px;
-      background: radial-gradient(circle, rgba(59,111,255,0.07) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      max-width: 1100px;
-      margin: 0 auto;
-      width: 100%;
-    }
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-body);
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 28px;
-    }
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 24px;
-      height: 1px;
-      background: var(--accent);
-    }
-    h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.8rem, 5.5vw, 4.8rem);
-      font-weight: 700;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      color: var(--white);
-      max-width: 780px;
-      margin-bottom: 28px;
-    }
-    h1 em {
-      font-style: normal;
-      color: var(--accent);
-    }
-    .hero-sub {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: var(--white-dim);
-      max-width: 560px;
-      margin-bottom: 44px;
-    }
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #fff;
-      background: var(--accent);
-      padding: 14px 28px;
-      border-radius: 6px;
-      text-decoration: none;
-      letter-spacing: 0.01em;
-      transition: transform 0.15s, opacity 0.15s;
-    }
-    .btn-primary:hover { transform: translateY(-1px); opacity: 0.9; }
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--white);
-      background: transparent;
-      border: 1px solid var(--navy-border);
-      padding: 14px 28px;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: border-color 0.15s, background 0.15s;
-    }
-    .btn-secondary:hover {
-      border-color: rgba(59,111,255,0.5);
-      background: var(--accent-dim);
-    }
-
-    /* ── VISION SCAN DEMO ── */
-    .hero-visual {
-      margin-top: 72px;
-      position: relative;
-    }
-    .scan-container {
-      background: var(--navy-card);
-      border: 1px solid var(--navy-border);
-      border-radius: 10px;
-      padding: 28px;
-      max-width: 700px;
-      position: relative;
-      overflow: hidden;
-    }
-    .scan-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    .scan-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-    }
-    .scan-label {
-      font-family: var(--font-body);
-      font-size: 0.75rem;
-      color: var(--white-dim);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    .scan-label strong { color: var(--green); margin-right: 4px; }
-    .scan-image-area {
-      background: #0D1424;
-      border-radius: 6px;
-      height: 220px;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    /* Animated scan line */
-    .scan-line {
-      position: absolute;
-      left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--accent), transparent);
-      animation: scanDown 3s ease-in-out infinite;
-      opacity: 0.7;
-    }
-    @keyframes scanDown {
-      0%   { top: 0%; opacity: 0; }
-      5%   { opacity: 0.7; }
-      95%  { opacity: 0.7; }
-      100% { top: 100%; opacity: 0; }
-    }
-    /* Detection boxes */
-    .det-box {
-      position: absolute;
-      border: 1.5px solid var(--accent);
-      border-radius: 3px;
-      animation: boxFade 3s ease-in-out infinite;
-    }
-    .det-box::before {
-      content: attr(data-label);
-      position: absolute;
-      top: -22px; left: -1px;
-      font-family: var(--font-body);
-      font-size: 0.65rem;
-      font-weight: 600;
-      color: var(--accent);
-      background: rgba(10,15,30,0.9);
-      padding: 2px 6px;
-      border-radius: 3px;
-      white-space: nowrap;
-      letter-spacing: 0.04em;
-    }
-    .det-box.green { border-color: var(--green); }
-    .det-box.green::before { color: var(--green); }
-    .det-box.red  { border-color: #FF4D6D; }
-    .det-box.red::before  { color: #FF4D6D; }
-    @keyframes boxFade {
-      0%, 20% { opacity: 0; }
-      30%, 80% { opacity: 1; }
-      90%, 100% { opacity: 0; }
-    }
-    .box1 { top: 35px;  left: 60px;  width: 55px; height: 55px; animation-delay: 0.4s; }
-    .box2 { top: 60px;  left: 200px; width: 48px; height: 48px; animation-delay: 0.8s; }
-    .box3 { top: 110px; left: 130px; width: 60px; height: 60px; animation-delay: 1.2s; }
-    .box4 { top: 80px;  left: 390px; width: 52px; height: 52px; animation-delay: 0.6s; }
-    .box5 { top: 130px; left: 500px; width: 45px; height: 45px; animation-delay: 1.0s; }
-    .scan-placeholder-cells {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: repeat(5, 1fr);
-      gap: 2px;
-      width: 100%; height: 100%;
-      padding: 10px;
-    }
-    .scan-cell {
-      background: rgba(255,255,255,0.03);
-      border-radius: 1px;
-    }
-    .scan-cell.bright { background: rgba(255,255,255,0.07); }
-    .scan-cell.mid    { background: rgba(255,255,255,0.05); }
-    .scan-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 20px;
-    }
-    .scan-stat {
-      background: #0D1424;
-      border: 1px solid var(--navy-border);
-      border-radius: 6px;
-      padding: 12px 16px;
-    }
-    .scan-stat-label {
-      font-family: var(--font-body);
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--white-dim);
-      margin-bottom: 4px;
-    }
-    .scan-stat-val {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--white);
-    }
-    .scan-stat-val.green { color: var(--green); }
-    .scan-stat-val.red   { color: #FF4D6D; }
-
-    /* ── SECTION LABELS ── */
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-body);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 20px;
-    }
-    .section-label::before {
-      content: '';
-      display: block;
-      width: 18px;
-      height: 1px;
-      background: var(--accent);
+    .section-eyebrow::before {
+      content: ''; display: block; width: 18px; height: 1px; background: var(--accent);
     }
     h2 {
       font-family: var(--font-display);
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      line-height: 1.1;
-      color: var(--white);
+      font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+      font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; color: var(--white);
+    }
+    .divider { border: none; border-top: 1px solid var(--navy-border); margin: 0; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh; display: flex; align-items: center;
+      padding-top: 140px; padding-bottom: 100px;
+      position: relative; overflow: hidden;
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(59,111,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,111,255,0.035) 1px, transparent 1px);
+      background-size: 48px 48px; pointer-events: none;
+    }
+    .hero-glow {
+      position: absolute; top: -220px; left: -220px;
+      width: 720px; height: 720px;
+      background: radial-gradient(circle, rgba(59,111,255,0.07) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; width: 100%; }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 28px;
+    }
+    .hero-tag::before { content: ''; display: block; width: 24px; height: 1px; background: var(--accent); }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+      font-weight: 700; line-height: 1.04; letter-spacing: -0.03em;
+      color: var(--white); max-width: 820px; margin-bottom: 28px;
+    }
+    h1 em { font-style: normal; color: var(--accent); }
+
+    .hero-sub {
+      font-size: 1.1rem; line-height: 1.75; color: var(--white-dim);
+      max-width: 580px; margin-bottom: 44px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.9rem; font-weight: 600; color: #fff;
+      background: var(--accent); padding: 14px 28px; border-radius: 6px;
+      text-decoration: none; transition: transform 0.15s, opacity 0.15s;
+    }
+    .btn-primary:hover { transform: translateY(-1px); opacity: 0.88; }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.9rem; font-weight: 500; color: var(--white);
+      background: transparent; border: 1px solid var(--navy-border);
+      padding: 14px 28px; border-radius: 6px; text-decoration: none;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .btn-secondary:hover { border-color: rgba(59,111,255,0.45); background: var(--accent-dim); }
+
+    /* Hero scan demo */
+    .hero-visual { margin-top: 72px; }
+    .scan-wrap {
+      background: var(--navy-card); border: 1px solid var(--navy-border);
+      border-radius: 10px; padding: 26px; max-width: 680px; overflow: hidden;
+    }
+    .scan-header { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; }
+    .scan-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .scan-badge {
+      margin-left: 8px; font-size: 0.72rem; color: var(--white-dim);
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .scan-badge strong { color: var(--green); margin-right: 3px; }
+    .scan-area {
+      background: #0D1424; border-radius: 6px; height: 200px;
+      position: relative; overflow: hidden; display: flex;
+    }
+    .scan-cells {
+      display: grid; grid-template-columns: repeat(12,1fr);
+      grid-template-rows: repeat(5,1fr); gap: 2px;
+      width: 100%; height: 100%; padding: 8px;
+    }
+    .sc { background: rgba(255,255,255,0.03); border-radius: 1px; }
+    .sc.b { background: rgba(255,255,255,0.07); }
+    .sc.m { background: rgba(255,255,255,0.05); }
+    .scan-line {
+      position: absolute; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      animation: scanDown 3s ease-in-out infinite; opacity: 0.65;
+    }
+    @keyframes scanDown {
+      0%   { top: 0%;   opacity: 0; }
+      5%   { opacity: 0.65; }
+      95%  { opacity: 0.65; }
+      100% { top: 100%; opacity: 0; }
+    }
+    .dbox {
+      position: absolute; border: 1.5px solid; border-radius: 3px;
+      animation: bFade 3s ease-in-out infinite;
+    }
+    .dbox::before {
+      content: attr(data-label); position: absolute; top: -21px; left: -1px;
+      font-size: 0.63rem; font-weight: 600; background: rgba(10,15,30,0.92);
+      padding: 2px 6px; border-radius: 3px; white-space: nowrap; letter-spacing: 0.04em;
+    }
+    .dbox.r { border-color: #FF4D6D; color: #FF4D6D; }
+    .dbox.r::before { color: #FF4D6D; }
+    .dbox.g { border-color: var(--green); color: var(--green); }
+    .dbox.g::before { color: var(--green); }
+    @keyframes bFade { 0%,20%{opacity:0} 30%,80%{opacity:1} 90%,100%{opacity:0} }
+    .b1{top:32px;left:55px;width:52px;height:52px;animation-delay:.4s}
+    .b2{top:58px;left:190px;width:46px;height:46px;animation-delay:.9s}
+    .b3{top:105px;left:125px;width:58px;height:58px;animation-delay:1.3s}
+    .b4{top:75px;left:375px;width:50px;height:50px;animation-delay:.65s}
+    .b5{top:120px;left:475px;width:44px;height:44px;animation-delay:1.05s}
+    .scan-stats {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 10px; margin-top: 18px;
+    }
+    .ss {
+      background: #0D1424; border: 1px solid var(--navy-border);
+      border-radius: 6px; padding: 11px 14px;
+    }
+    .ss-label { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white-dim); margin-bottom: 3px; }
+    .ss-val { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--white); }
+    .ss-val.g { color: var(--green); }
+    .ss-val.r { color: #FF4D6D; }
+    @media (prefers-reduced-motion: reduce) {
+      .scan-line, .dbox { animation: none; opacity: 1; }
     }
 
-    /* ── WHAT WE BUILD ── */
-    #work { border-top: 1px solid var(--navy-border); }
-    .work-intro {
-      max-width: 560px;
-      margin-bottom: 64px;
+    /* ── CAPABILITY (replaces "What we build") ── */
+    #capability { border-top: 1px solid var(--navy-border); }
+    .cap-intro { max-width: 600px; margin-bottom: 64px; }
+    .cap-intro p { margin-top: 16px; font-size: 1rem; color: var(--white-dim); line-height: 1.75; }
+    .cap-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1px; background: var(--navy-border);
+      border: 1px solid var(--navy-border); border-radius: 10px; overflow: hidden;
     }
-    .work-intro p {
-      margin-top: 16px;
-      color: var(--white-dim);
-      font-size: 1rem;
+    .cap-card { background: var(--navy-card); padding: 38px 34px; }
+    .cap-icon {
+      width: 42px; height: 42px; background: var(--accent-dim); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 22px;
     }
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--navy-border);
-      border: 1px solid var(--navy-border);
-      border-radius: 10px;
-      overflow: hidden;
+    .cap-icon svg { width: 20px; height: 20px; stroke: var(--accent); fill: none; stroke-width: 1.8; }
+    .cap-card h3 {
+      font-family: var(--font-display); font-size: 1.05rem; font-weight: 600;
+      letter-spacing: -0.01em; color: var(--white); margin-bottom: 10px;
     }
-    .work-card {
-      background: var(--navy-card);
-      padding: 40px 36px;
-      position: relative;
+    .cap-card p { font-size: 0.875rem; color: var(--white-dim); line-height: 1.68; margin-bottom: 24px; }
+    .cap-tags { display: flex; flex-direction: column; gap: 7px; }
+    .cap-tag {
+      display: flex; align-items: center; gap: 9px;
+      font-size: 0.83rem; color: var(--white-dim);
+      padding: 7px 0; border-bottom: 1px solid var(--navy-border);
     }
-    .work-card-icon {
-      width: 44px; height: 44px;
-      background: var(--accent-dim);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 24px;
-    }
-    .work-card-icon svg { width: 22px; height: 22px; stroke: var(--accent); fill: none; stroke-width: 1.8; }
-    .work-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      color: var(--white);
-      margin-bottom: 10px;
-    }
-    .work-card-desc {
-      font-size: 0.875rem;
-      color: var(--white-dim);
-      line-height: 1.65;
-      margin-bottom: 28px;
-    }
-    .work-status {
-      margin-bottom: 10px;
-    }
-    .status-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin-bottom: 8px;
-      margin-right: 6px;
-    }
-    .status-tag.active {
-      color: var(--green);
-      background: rgba(46,204,138,0.1);
-      border: 1px solid rgba(46,204,138,0.2);
-    }
-    .status-tag.future {
-      color: var(--stone);
-      background: rgba(196,185,154,0.08);
-      border: 1px solid rgba(196,185,154,0.15);
-    }
-    .status-tag::before {
-      content: '';
-      display: block;
-      width: 5px; height: 5px;
-      border-radius: 50%;
-      background: currentColor;
-    }
-    .work-items {
-      list-style: none;
-      margin-top: 12px;
-    }
-    .work-items li {
-      font-size: 0.85rem;
-      color: var(--white-dim);
-      padding: 7px 0;
-      border-bottom: 1px solid var(--navy-border);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .work-items li:last-child { border-bottom: none; }
-    .work-items li .dot {
-      width: 4px; height: 4px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-    }
-    .work-items li.future .dot { background: var(--stone); }
+    .cap-tag:last-child { border-bottom: none; }
+    .cap-tag .dot { width: 4px; height: 4px; border-radius: 50%; flex-shrink: 0; }
+    .cap-tag.active .dot { background: var(--green); }
+    .cap-tag.active { color: var(--white-dim); }
+    .cap-tag.soon .dot { background: var(--stone); }
 
-    /* ── FEATURED PROJECT ── */
-    #project { border-top: 1px solid var(--navy-border); }
-    .project-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: start;
+    /* ── PROOF / PROJECTS ── */
+    #proof { border-top: 1px solid var(--navy-border); }
+    .proof-intro { max-width: 560px; margin-bottom: 64px; }
+    .proof-intro p { margin-top: 14px; font-size: 1rem; color: var(--white-dim); line-height: 1.75; }
+    .proof-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .proof-card {
+      background: var(--navy-card); border: 1px solid var(--navy-border);
+      border-radius: 10px; overflow: hidden;
     }
-    .project-info h2 { margin-bottom: 16px; }
-    .project-info p {
-      color: var(--white-dim);
-      font-size: 0.95rem;
-      margin-bottom: 28px;
-      line-height: 1.75;
+    .proof-card-head {
+      padding: 28px 28px 0;
     }
-    .project-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+    .proof-status {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 4px; margin-bottom: 16px;
     }
-    .project-meta-row {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
+    .proof-status.active { color: var(--green); background: rgba(46,204,138,0.1); border: 1px solid rgba(46,204,138,0.2); }
+    .proof-status.research { color: var(--accent); background: var(--accent-dim); border: 1px solid rgba(59,111,255,0.2); }
+    .proof-status::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: currentColor; display: block; }
+    .proof-card h3 {
+      font-family: var(--font-display); font-size: 1.15rem; font-weight: 700;
+      letter-spacing: -0.015em; color: var(--white); margin-bottom: 10px;
     }
-    .meta-chip {
-      font-family: var(--font-body);
-      font-size: 0.78rem;
-      color: var(--white-dim);
-      background: var(--navy-surface);
-      border: 1px solid var(--navy-border);
-      padding: 6px 14px;
-      border-radius: 20px;
+    .proof-card p { font-size: 0.875rem; color: var(--white-dim); line-height: 1.7; margin-bottom: 22px; }
+    .proof-metrics {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1px; background: var(--navy-border);
+      border-top: 1px solid var(--navy-border);
     }
-    .meta-chip.highlight {
-      color: var(--accent);
-      background: var(--accent-dim);
-      border-color: rgba(59,111,255,0.25);
+    .pm { background: var(--navy-card); padding: 14px 16px; }
+    .pm-label { font-size: 0.67rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white-dim); margin-bottom: 3px; }
+    .pm-val { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--white); }
+    .pm-val.g { color: var(--green); }
+
+    /* Results panel inside malaria card */
+    .det-rows { padding: 0 28px 24px; display: flex; flex-direction: column; gap: 8px; }
+    .det-row {
+      display: flex; gap: 10px; align-items: flex-start;
+      background: #0D1424; border: 1px solid var(--navy-border);
+      border-radius: 5px; padding: 11px 13px;
     }
-    .project-visual {
-      position: relative;
+    .det-icon { width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .det-icon.pos { background: rgba(255,77,109,0.12); }
+    .det-icon.neg { background: rgba(46,204,138,0.12); }
+    .det-name { font-family: var(--font-display); font-size: 0.8rem; font-weight: 600; color: var(--white); margin-bottom: 2px; }
+    .det-conf { font-size: 0.7rem; color: var(--white-dim); margin-bottom: 5px; }
+    .cbar { height: 2px; background: var(--navy-border); border-radius: 1px; overflow: hidden; }
+    .cfill { height: 100%; border-radius: 1px; }
+    .cfill.h { background: #FF4D6D; } .cfill.l { background: var(--green); }
+    .proof-illustrative {
+      margin: 0 28px 4px;
+      font-size: 0.67rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--stone); opacity: 0.7;
     }
-    .project-mockup {
-      background: var(--navy-card);
-      border: 1px solid var(--navy-border);
-      border-radius: 10px;
-      overflow: hidden;
+
+    /* ANPR card visual */
+    .anpr-visual { padding: 0 28px 24px; }
+    .anpr-plate {
+      background: #FFFBE6; border-radius: 6px; padding: 14px 20px;
+      margin-bottom: 12px; position: relative; border: 2px solid #E8D800;
     }
-    .mockup-topbar {
-      background: #0D1424;
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      border-bottom: 1px solid var(--navy-border);
+    .anpr-text {
+      font-family: var(--font-display); font-size: 1.6rem; font-weight: 700;
+      letter-spacing: 0.15em; color: #111; text-align: center;
     }
-    .mockup-dot {
-      width: 10px; height: 10px;
-      border-radius: 50%;
+    .anpr-label {
+      position: absolute; top: -10px; left: 12px;
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em;
+      color: var(--green); background: var(--navy-card);
+      padding: 1px 7px; border-radius: 3px; text-transform: uppercase;
     }
-    .mockup-body {
-      padding: 24px;
+    .anpr-rows { display: flex; flex-direction: column; gap: 6px; }
+    .anpr-row {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.78rem; color: var(--white-dim);
+      padding: 6px 0; border-bottom: 1px solid var(--navy-border);
     }
-    .detection-result {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      padding: 14px;
-      background: #0D1424;
-      border-radius: 6px;
-      margin-bottom: 10px;
-      border: 1px solid var(--navy-border);
+    .anpr-row:last-child { border-bottom: none; }
+    .anpr-val { font-family: var(--font-display); font-size: 0.82rem; font-weight: 600; color: var(--white); }
+
+    /* ── RESEARCH ── */
+    #research { border-top: 1px solid var(--navy-border); }
+    .research-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+    .research-info h2 { margin-bottom: 16px; }
+    .research-info p { font-size: 0.95rem; color: var(--white-dim); line-height: 1.78; margin-bottom: 28px; }
+    .research-areas {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: var(--navy-border);
+      border: 1px solid var(--navy-border); border-radius: 8px; overflow: hidden;
     }
-    .detection-result:last-child { margin-bottom: 0; }
-    .result-icon {
-      width: 36px; height: 36px;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
+    .ra {
+      background: var(--navy-card); padding: 20px 22px;
     }
-    .result-icon.positive { background: rgba(255,77,109,0.12); }
-    .result-icon.negative { background: rgba(46,204,138,0.12); }
-    .result-content { flex: 1; }
-    .result-name {
-      font-family: var(--font-display);
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 4px;
+    .ra-num { font-family: var(--font-display); font-size: 0.7rem; font-weight: 700; color: var(--accent); opacity: 0.5; margin-bottom: 6px; letter-spacing: 0.08em; }
+    .ra h4 { font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; color: var(--white); margin-bottom: 5px; }
+    .ra p { font-size: 0.8rem; color: var(--white-dim); line-height: 1.6; }
+
+    /* ── WHY AFRICA ── */
+    #why { border-top: 1px solid var(--navy-border); }
+    .why-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+    .why-text h2 { margin-bottom: 20px; }
+    .why-text p { font-size: 0.95rem; color: var(--white-dim); line-height: 1.8; margin-bottom: 16px; }
+    .why-stats {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: var(--navy-border);
+      border: 1px solid var(--navy-border); border-radius: 8px; overflow: hidden;
     }
-    .result-conf {
-      font-size: 0.75rem;
-      color: var(--white-dim);
-      margin-bottom: 8px;
+    .ws { background: var(--navy-card); padding: 22px 24px; }
+    .ws-num { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--white); line-height: 1; margin-bottom: 6px; }
+    .ws-num span { font-size: 1rem; color: var(--accent); }
+    .ws-label { font-size: 0.78rem; color: var(--white-dim); line-height: 1.45; }
+    .why-principle {
+      margin-top: 28px; padding: 22px 24px;
+      background: var(--navy-card); border: 1px solid var(--navy-border); border-radius: 8px;
+      border-left: 3px solid var(--accent);
     }
-    .conf-bar {
-      height: 3px;
-      background: var(--navy-border);
-      border-radius: 2px;
-      overflow: hidden;
+    .why-principle p { font-size: 0.875rem; color: var(--white-dim); line-height: 1.75; margin: 0; }
+    .why-principle p em { color: var(--white); font-style: normal; }
+
+    /* ── ROADMAP ── */
+    #roadmap { border-top: 1px solid var(--navy-border); }
+    .roadmap-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1px; background: var(--navy-border);
+      border: 1px solid var(--navy-border); border-radius: 10px; overflow: hidden;
     }
-    .conf-fill {
-      height: 100%;
-      border-radius: 2px;
-      transition: width 0.5s;
+    .rmc { background: var(--navy-card); padding: 34px 30px; }
+    .rm-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 4px 11px; border-radius: 4px; margin-bottom: 22px;
     }
-    .conf-fill.high { background: #FF4D6D; }
-    .conf-fill.low  { background: var(--green); }
-    .result-badge {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 3px 8px;
-      border-radius: 3px;
-      margin-top: 6px;
-    }
-    .result-badge.pos { color: #FF4D6D; background: rgba(255,77,109,0.1); }
-    .result-badge.neg { color: var(--green); background: rgba(46,204,138,0.1); }
+    .rm-badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: currentColor; display: block; }
+    .rm-badge.now { color: var(--green); background: rgba(46,204,138,0.08); border: 1px solid rgba(46,204,138,0.18); }
+    .rm-badge.next { color: var(--accent); background: var(--accent-dim); border: 1px solid rgba(59,111,255,0.2); }
+    .rm-badge.future { color: var(--stone); background: rgba(196,185,154,0.07); border: 1px solid rgba(196,185,154,0.15); }
+    .rmc h4 { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 18px; }
+    .rm-items { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .rm-items li { display: flex; align-items: flex-start; gap: 9px; font-size: 0.85rem; color: var(--white-dim); line-height: 1.5; }
+    .rm-items li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: currentColor; flex-shrink: 0; margin-top: 7px; }
+    .rm-items li.g { color: var(--green); }
+    .rm-items li.b { color: var(--accent); }
+    .rm-items li.s { color: var(--stone); }
 
     /* ── VISION ── */
-    #vision {
-      border-top: 1px solid var(--navy-border);
-      text-align: center;
-    }
-    .vision-inner { max-width: 720px; margin: 0 auto; }
+    #vision { border-top: 1px solid var(--navy-border); text-align: center; }
+    .vision-inner { max-width: 700px; margin: 0 auto; }
     .vision-inner h2 { margin-bottom: 20px; }
-    .vision-inner p {
-      font-size: 1.05rem;
-      color: var(--white-dim);
-      line-height: 1.8;
-      margin-bottom: 16px;
-    }
-    .vision-divider {
-      width: 48px;
-      height: 2px;
-      background: var(--accent);
-      margin: 36px auto;
-      border-radius: 2px;
-    }
+    .vision-inner p { font-size: 1.02rem; color: var(--white-dim); line-height: 1.82; margin-bottom: 14px; }
+    .vision-bar { width: 44px; height: 2px; background: var(--accent); margin: 32px auto; border-radius: 2px; }
     .vision-pillars {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--navy-border);
-      border: 1px solid var(--navy-border);
-      border-radius: 10px;
-      overflow: hidden;
-      margin-top: 56px;
-      text-align: left;
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1px; background: var(--navy-border);
+      border: 1px solid var(--navy-border); border-radius: 10px; overflow: hidden;
+      margin-top: 52px; text-align: left;
     }
-    .pillar {
-      background: var(--navy-card);
-      padding: 32px 28px;
-    }
-    .pillar-num {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--accent);
-      opacity: 0.25;
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-    .pillar h4 {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-    .pillar p {
-      font-size: 0.85rem;
-      color: var(--white-dim);
-      line-height: 1.65;
-      margin: 0;
-    }
+    .pillar { background: var(--navy-card); padding: 30px 26px; }
+    .pillar-n { font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; color: var(--accent); opacity: 0.2; line-height: 1; margin-bottom: 14px; }
+    .pillar h4 { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 7px; }
+    .pillar p { font-size: 0.83rem; color: var(--white-dim); line-height: 1.65; margin: 0; }
 
     /* ── FOUNDER ── */
     #founder { border-top: 1px solid var(--navy-border); }
-    .founder-layout {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 56px;
-      align-items: start;
-      max-width: 800px;
-    }
+    .founder-layout { display: grid; grid-template-columns: auto 1fr; gap: 52px; align-items: start; max-width: 820px; }
     .founder-avatar {
-      width: 120px; height: 120px;
-      border-radius: 8px;
-      background: var(--navy-card);
-      border: 1px solid var(--navy-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
+      width: 116px; height: 116px; border-radius: 8px;
+      background: var(--navy-card); border: 1px solid var(--navy-border);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
-    .founder-avatar svg { width: 48px; height: 48px; stroke: var(--white-dim); fill: none; stroke-width: 1.2; }
-    .founder-name {
-      font-family: var(--font-display);
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: -0.015em;
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-    .founder-title {
-      font-size: 0.85rem;
-      color: var(--accent);
-      font-weight: 500;
-      margin-bottom: 20px;
-      letter-spacing: 0.02em;
-    }
-    .founder-bio {
-      font-size: 0.95rem;
-      color: var(--white-dim);
-      line-height: 1.75;
-      margin-bottom: 24px;
-    }
-    .founder-tags {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .founder-tag {
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: var(--white-dim);
-      background: var(--navy-surface);
-      border: 1px solid var(--navy-border);
-      padding: 5px 12px;
-      border-radius: 4px;
-    }
+    .founder-avatar svg { width: 46px; height: 46px; stroke: var(--white-dim); fill: none; stroke-width: 1.2; }
+    .founder-name { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; letter-spacing: -0.015em; color: var(--white); margin-bottom: 3px; }
+    .founder-title { font-size: 0.83rem; color: var(--accent); font-weight: 500; margin-bottom: 18px; letter-spacing: 0.02em; }
+    .founder-bio { font-size: 0.93rem; color: var(--white-dim); line-height: 1.78; margin-bottom: 20px; }
+    .founder-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .ftag { font-size: 0.76rem; font-weight: 500; color: var(--white-dim); background: var(--navy-surface); border: 1px solid var(--navy-border); padding: 5px 12px; border-radius: 4px; }
 
     /* ── CONTACT ── */
-    #contact {
-      border-top: 1px solid var(--navy-border);
-      text-align: center;
-    }
-    .contact-inner { max-width: 560px; margin: 0 auto; }
-    .contact-inner h2 { margin-bottom: 16px; }
-    .contact-inner p {
-      color: var(--white-dim);
-      font-size: 1rem;
-      margin-bottom: 36px;
-      line-height: 1.7;
-    }
+    #contact { border-top: 1px solid var(--navy-border); text-align: center; }
+    .contact-inner { max-width: 540px; margin: 0 auto; }
+    .contact-inner h2 { margin-bottom: 14px; }
+    .contact-inner p { color: var(--white-dim); font-size: 0.98rem; margin-bottom: 36px; line-height: 1.72; }
     .contact-email {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--white);
-      text-decoration: none;
-      padding: 16px 32px;
-      border: 1px solid var(--navy-border);
-      border-radius: 8px;
-      transition: border-color 0.2s, background 0.2s;
-      margin-bottom: 24px;
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--font-display); font-size: 1.05rem; font-weight: 600;
+      color: var(--white); text-decoration: none;
+      padding: 16px 32px; border: 1px solid var(--navy-border); border-radius: 8px;
+      transition: border-color 0.2s, background 0.2s; margin-bottom: 24px;
     }
-    .contact-email:hover {
-      border-color: var(--accent);
-      background: var(--accent-dim);
-    }
-    .contact-areas {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-    .contact-area {
-      font-size: 0.8rem;
-      color: var(--white-dim);
-      background: var(--navy-card);
-      border: 1px solid var(--navy-border);
-      padding: 8px 16px;
-      border-radius: 20px;
-    }
+    .contact-email:hover { border-color: var(--accent); background: var(--accent-dim); }
+    .contact-chips { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 18px; }
+    .chip { font-size: 0.78rem; color: var(--white-dim); background: var(--navy-card); border: 1px solid var(--navy-border); padding: 7px 15px; border-radius: 20px; }
 
     /* ── FOOTER ── */
     footer {
-      border-top: 1px solid var(--navy-border);
-      padding: 36px 60px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      border-top: 1px solid var(--navy-border); padding: 34px 60px;
+      display: flex; align-items: center; justify-content: space-between;
     }
-    .footer-logo {
-      font-family: var(--font-display);
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--white-dim);
-    }
+    .footer-logo { font-family: var(--font-display); font-size: 0.93rem; font-weight: 700; color: var(--white-dim); }
     .footer-logo span { color: var(--accent); }
-    .footer-note {
-      font-size: 0.8rem;
-      color: var(--white-faint);
+    .footer-links { display: flex; align-items: center; gap: 22px; }
+    .footer-link {
+      display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--white-dim);
+      text-decoration: none; transition: color 0.2s;
     }
+    .footer-link:hover { color: var(--white); }
+    .footer-copy { font-size: 0.78rem; color: var(--white-faint); }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      nav { padding: 18px 24px; }
+    @media (max-width: 920px) {
+      nav { padding: 18px 22px; }
       .nav-links { display: none; }
-      section { padding: 72px 24px; }
-      h1 { font-size: 2.5rem; }
-      .work-grid { grid-template-columns: 1fr; }
-      .project-layout { grid-template-columns: 1fr; gap: 40px; }
-      .vision-pillars { grid-template-columns: 1fr; }
-      .founder-layout { grid-template-columns: 1fr; gap: 32px; }
-      footer { padding: 28px 24px; flex-direction: column; gap: 10px; text-align: center; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .scan-line, .det-box { animation: none; opacity: 1; }
+      section { padding: 72px 22px; }
+      h1 { font-size: 2.4rem; }
+      .cap-grid, .proof-grid, .roadmap-grid, .vision-pillars,
+      .research-layout, .research-areas, .why-layout, .why-stats { grid-template-columns: 1fr; }
+      .founder-layout { grid-template-columns: 1fr; gap: 28px; }
+      footer { padding: 26px 22px; flex-direction: column; gap: 18px; text-align: center; }
+      .footer-links { justify-content: center; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <a class="nav-logo" href="#">Celes<span>Tium</span> AI</a>
-    <ul class="nav-links">
-      <li><a href="#work">Work</a></li>
-      <li><a href="#project">Projects</a></li>
-      <li><a href="#roadmap">Roadmap</a></li>
-      <li><a href="#vision">Vision</a></li>
-      <li><a href="#founder">About</a></li>
-    </ul>
-    <a class="nav-cta" href="#contact">Contact Us</a>
-  </nav>
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">Celes<span>Tium</span> AI</a>
+  <ul class="nav-links">
+    <li><a href="#capability">Capabilities</a></li>
+    <li><a href="#proof">Work</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#why">Why Africa</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#founder">About</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Contact Us</a>
+</nav>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-grid-bg"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-inner">
-      <div class="hero-eyebrow">Computer Vision · Africa</div>
-      <h1>Building Computer Vision Infrastructure for <em>Africa</em></h1>
-      <p class="hero-sub">
-        CelesTium AI develops intelligent systems for healthcare, transportation, and
-        critical real-world operations using computer vision and AI — built for African realities.
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-tag">Computer Vision Infrastructure · Africa</div>
+    <h1>Building <strong>computer vision infrastructure</strong> that enables machines to <em>perceive and act</em> on the physical world across Africa</h1>
+    <p class="hero-sub">
+      CelesTium AI develops the models, datasets, and deployment technologies that power intelligent perception in African environments — currently proven in healthcare diagnostics and transportation intelligence, expanding across critical infrastructure.
+    </p>
+    <div class="hero-actions">
+      <a href="#proof" class="btn-primary">
+        See Our Work
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#contact" class="btn-secondary">Contact Us</a>
+    </div>
+
+    <div class="hero-visual">
+      <div class="scan-wrap">
+        <div class="scan-header">
+          <div class="scan-dot" style="background:#FF4D6D"></div>
+          <div class="scan-dot" style="background:#F5C518"></div>
+          <div class="scan-dot" style="background:#2ECC8A"></div>
+          <div class="scan-badge"><strong>● LIVE</strong> Malaria Detection · Blood Smear Analysis · P. vivax</div>
+        </div>
+        <div class="scan-area">
+          <div class="scan-cells">
+            <div class="sc b"></div><div class="sc"></div><div class="sc m"></div><div class="sc b"></div><div class="sc"></div><div class="sc m"></div><div class="sc"></div><div class="sc b"></div><div class="sc"></div><div class="sc m"></div><div class="sc b"></div><div class="sc"></div>
+            <div class="sc"></div><div class="sc m"></div><div class="sc b"></div><div class="sc"></div><div class="sc b"></div><div class="sc"></div><div class="sc m"></div><div class="sc"></div><div class="sc b"></div><div class="sc"></div><div class="sc m"></div><div class="sc b"></div>
+            <div class="sc m"></div><div class="sc b"></div><div class="sc"></div><div class="sc m"></div><div class="sc"></div><div class="sc b"></div><div class="sc m"></div><div class="sc b"></div><div class="sc"></div><div class="sc m"></div><div class="sc"></div><div class="sc b"></div>
+            <div class="sc b"></div><div class="sc"></div><div class="sc m"></div><div class="sc b"></div><div class="sc"></div><div class="sc m"></div><div class="sc b"></div><div class="sc"></div><div class="sc m"></div><div class="sc b"></div><div class="sc"></div><div class="sc m"></div>
+            <div class="sc"></div><div class="sc m"></div><div class="sc b"></div><div class="sc"></div><div class="sc m"></div><div class="sc b"></div><div class="sc"></div><div class="sc m"></div><div class="sc b"></div><div class="sc"></div><div class="sc m"></div><div class="sc b"></div>
+          </div>
+          <div class="dbox r b1" data-label="Ring Stage 91.4%"></div>
+          <div class="dbox r b2" data-label="Trophozoite 87.6%"></div>
+          <div class="dbox g b3" data-label="Healthy RBC 96.8%"></div>
+          <div class="dbox r b4" data-label="Schizont 84.2%"></div>
+          <div class="dbox g b5" data-label="Healthy RBC 98.3%"></div>
+          <div class="scan-line"></div>
+        </div>
+        <div class="scan-stats">
+          <div class="ss"><div class="ss-label">Cells Analyzed</div><div class="ss-val">247</div></div>
+          <div class="ss"><div class="ss-label">Parasites Detected</div><div class="ss-val r">38</div></div>
+          <div class="ss"><div class="ss-label">mAP@50</div><div class="ss-val g">0.60+</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section id="capability">
+  <div class="container">
+    <div class="cap-intro">
+      <div class="section-eyebrow">Capabilities</div>
+      <h2>One mission. Three capability layers.</h2>
+      <p>CelesTium AI builds computer vision infrastructure. Everything else — healthcare systems, transportation intelligence, data pipelines — is a consequence of that mission. Malaria detection and ANPR are today's proof. The infrastructure layer is where this goes.</p>
+    </div>
+    <div class="cap-grid">
+
+      <div class="cap-card">
+        <div class="cap-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+        </div>
+        <h3>Medical Computer Vision</h3>
+        <p>Perception systems for healthcare settings — detecting, classifying, and reporting what trained clinicians need, at machine speed and scale.</p>
+        <div class="cap-tags">
+          <div class="cap-tag active"><span class="dot"></span>Malaria Detection System</div>
+          <div class="cap-tag soon"><span class="dot"></span>Blood Cell Analysis</div>
+          <div class="cap-tag soon"><span class="dot"></span>Diagnostic Vision Pipelines</div>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <div class="cap-icon">
+          <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3>Transportation Intelligence</h3>
+        <p>Vision systems tuned for African roads — where infrastructure varies, vehicle types differ, and models trained elsewhere simply don't work.</p>
+        <div class="cap-tags">
+          <div class="cap-tag active"><span class="dot"></span>ANPR Research Platform</div>
+          <div class="cap-tag soon"><span class="dot"></span>Traffic Intelligence</div>
+          <div class="cap-tag soon"><span class="dot"></span>Smart Road Monitoring</div>
+        </div>
+      </div>
+
+      <div class="cap-card">
+        <div class="cap-icon">
+          <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+        </div>
+        <h3>Data & Deployment Infrastructure</h3>
+        <p>The layer beneath the models — pipelines, datasets, annotation, and deployment systems that make AI sustainable in the field, not just in notebooks.</p>
+        <div class="cap-tags">
+          <div class="cap-tag soon"><span class="dot"></span>African CV Datasets</div>
+          <div class="cap-tag soon"><span class="dot"></span>Model Deployment Pipelines</div>
+          <div class="cap-tag soon"><span class="dot"></span>Computer Vision APIs</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROOF OF WORK -->
+<section id="proof">
+  <div class="container">
+    <div class="proof-intro">
+      <div class="section-eyebrow">Proof of Work</div>
+      <h2>Current projects</h2>
+      <p>These are not concepts. They are systems in active development, grounded in real data, real training runs, and real results. We distinguish clearly between what is built and what is planned.</p>
+    </div>
+    <div class="proof-grid">
+
+      <!-- Malaria Detection -->
+      <div class="proof-card">
+        <div class="proof-card-head">
+          <div class="proof-status active">Active · Healthcare AI</div>
+          <h3>Malaria Detection System</h3>
+          <p>YOLOv8-based system trained on BBBC041 to detect and classify P. vivax lifecycle stages — Ring, Trophozoite, Schizont, Gametocyte — from thick blood smear microscopy images.</p>
+        </div>
+        <div class="proof-illustrative">Example Analysis — Illustrative</div>
+        <div class="det-rows">
+          <div class="det-row">
+            <div class="det-icon pos"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF4D6D" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg></div>
+            <div style="flex:1">
+              <div class="det-name">Ring Stage</div>
+              <div class="det-conf">Conf: 91.4% · Early infection</div>
+              <div class="cbar"><div class="cfill h" style="width:91%"></div></div>
+            </div>
+          </div>
+          <div class="det-row">
+            <div class="det-icon pos"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF4D6D" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg></div>
+            <div style="flex:1">
+              <div class="det-name">Trophozoite</div>
+              <div class="det-conf">Conf: 87.6% · Growing stage</div>
+              <div class="cbar"><div class="cfill h" style="width:88%"></div></div>
+            </div>
+          </div>
+          <div class="det-row">
+            <div class="det-icon neg"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#2ECC8A" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <div style="flex:1">
+              <div class="det-name">Healthy RBC</div>
+              <div class="det-conf">Conf: 96.8% · Normal</div>
+              <div class="cbar"><div class="cfill l" style="width:97%"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="proof-metrics">
+          <div class="pm"><div class="pm-label">Dataset</div><div class="pm-val">BBBC041</div></div>
+          <div class="pm"><div class="pm-label">mAP@50</div><div class="pm-val g">0.60+</div></div>
+          <div class="pm"><div class="pm-label">mAP@50-95</div><div class="pm-val g">0.51+</div></div>
+          <div class="pm"><div class="pm-label">Images</div><div class="pm-val">1,300+</div></div>
+          <div class="pm"><div class="pm-label">Classes</div><div class="pm-val">5</div></div>
+          <div class="pm"><div class="pm-label">Epochs</div><div class="pm-val">50</div></div>
+        </div>
+      </div>
+
+      <!-- ANPR -->
+      <div class="proof-card">
+        <div class="proof-card-head">
+          <div class="proof-status research">Research · Transportation AI</div>
+          <h3>ANPR Research Platform</h3>
+          <p>Automatic Number Plate Recognition system in development for African road environments — handling diverse plate formats, fonts, lighting conditions, and vehicle types not represented in Western datasets.</p>
+        </div>
+        <div class="anpr-visual">
+          <div class="anpr-plate">
+            <div class="anpr-label">Detected</div>
+            <div class="anpr-text">LND 482 KJ</div>
+          </div>
+          <div class="anpr-rows">
+            <div class="anpr-row">
+              <span>Confidence</span>
+              <span class="anpr-val" style="color:var(--green)">94.7%</span>
+            </div>
+            <div class="anpr-row">
+              <span>Region</span>
+              <span class="anpr-val">Lagos, Nigeria</span>
+            </div>
+            <div class="anpr-row">
+              <span>Lighting Condition</span>
+              <span class="anpr-val">Partial Shadow</span>
+            </div>
+            <div class="anpr-row">
+              <span>Model</span>
+              <span class="anpr-val">YOLOv8 · Edge</span>
+            </div>
+          </div>
+        </div>
+        <div class="proof-metrics">
+          <div class="pm"><div class="pm-label">Focus</div><div class="pm-val">African Plates</div></div>
+          <div class="pm"><div class="pm-label">Environments</div><div class="pm-val">Edge AI</div></div>
+          <div class="pm"><div class="pm-label">Status</div><div class="pm-val" style="color:var(--accent)">Research</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="container">
+    <div class="research-layout">
+      <div class="research-info">
+        <div class="section-eyebrow">Research</div>
+        <h2>We're not just building apps</h2>
+        <p>CelesTium AI advances the underlying technology — not only deploying models but contributing to the methods, datasets, and techniques that make computer vision work in African contexts.</p>
+        <p>This is the difference between a services company and a technology company. Our research informs our systems, and our systems generate problems worth researching.</p>
+      </div>
+      <div class="research-areas">
+        <div class="ra">
+          <div class="ra-num">01</div>
+          <h4>Medical Computer Vision</h4>
+          <p>Detection and classification methods for disease diagnosis from microscopy and medical imaging.</p>
+        </div>
+        <div class="ra">
+          <div class="ra-num">02</div>
+          <h4>Dataset Engineering</h4>
+          <p>Building and curating African-specific datasets — the foundation that models depend on.</p>
+        </div>
+        <div class="ra">
+          <div class="ra-num">03</div>
+          <h4>Edge AI & Deployment</h4>
+          <p>Optimizing models for low-resource environments: limited compute, intermittent connectivity, field conditions.</p>
+        </div>
+        <div class="ra">
+          <div class="ra-num">04</div>
+          <h4>Detection Model Optimization</h4>
+          <p>Improving speed, accuracy, and generalization of object detection across African visual domains.</p>
+        </div>
+        <div class="ra">
+          <div class="ra-num">05</div>
+          <h4>Model Evaluation</h4>
+          <p>Rigorous validation frameworks for models operating in high-stakes clinical and infrastructure settings.</p>
+        </div>
+        <div class="ra">
+          <div class="ra-num">06</div>
+          <h4>Domain Adaptation</h4>
+          <p>Techniques for adapting and fine-tuning models across the visual diversity of African environments.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY AFRICA -->
+<section id="why">
+  <div class="container">
+    <div class="why-layout">
+      <div class="why-text">
+        <div class="section-eyebrow">Why Africa</div>
+        <h2>AI performs best on data that reflects the world it operates in</h2>
+        <p>Most AI systems in use today were trained on datasets that underrepresent African environments — different lighting conditions, different vehicle types, different disease presentations, different infrastructure.</p>
+        <p>The result is systems that degrade significantly when deployed across the continent. This is not a diversity problem. It is a technical problem with a technical solution: build the right data and models from the start.</p>
+        <p>I strongy Africa has what it takes to <strong>revolutionize</strong> its own Technology and take it to the next level.</p>
+        <div class="why-principle">
+          <p><em>CelesTium AI exists because African healthcare, transportation, and infrastructure present unique visual challenges that require locally relevant datasets, models, and deployment strategies.</em> We don't adapt solutions built elsewhere. We build for the actual environment.</p>
+        </div>
+      </div>
+      <div>
+        <div class="why-stats">
+          <div class="ws">
+            <div class="ws-num">1.4<span>B</span></div>
+            <div class="ws-label">People in Africa whose environments are underrepresented in global AI datasets</div>
+          </div>
+          <div class="ws">
+            <div class="ws-num">229<span>M</span></div>
+            <div class="ws-label">Malaria cases globally per year — the majority in Sub-Saharan Africa</div>
+          </div>
+          <div class="ws">
+            <div class="ws-num">~3<span>%</span></div>
+            <div class="ws-label">Share of global AI research focused on African contexts and datasets</div>
+          </div>
+          <div class="ws">
+            <div class="ws-num">0</div>
+            <div class="ws-label">Established CV infrastructure companies building for African environments from first principles</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+  <div class="container">
+    <div class="section-eyebrow" style="margin-bottom:18px;">Roadmap</div>
+    <h2 style="margin-bottom:52px;">What's built, what's next, what's the horizon</h2>
+    <div class="roadmap-grid">
+      <div class="rmc">
+        <div class="rm-badge now">Now · 2026</div>
+        <h4>Active Work</h4>
+        <ul class="rm-items">
+          <li class="g">Malaria Detection System — BBBC041 · P. vivax lifecycle classification</li>
+          <li class="g">ANPR Research Platform — African plate formats · Edge deployment</li>
+        </ul>
+      </div>
+      <div class="rmc">
+        <div class="rm-badge next">Next · 2027</div>
+        <h4>In Development</h4>
+        <ul class="rm-items">
+          <li class="b">Clinical Vision Systems — Blood cell analysis, diagnostic pipelines</li>
+          <li class="b">Transportation Intelligence — Traffic monitoring, vehicle analytics</li>
+          <li class="b">Smart Road Monitoring — Real-time infrastructure vision</li>
+          <li class="b">Agriculture — Crop disease detection, yield estimation, inventory evaluation</li>
+          <li class="b">Manufacturing — Quality inspection, defect detection</li>
+        </ul>
+      </div>
+      <div class="rmc">
+        <div class="rm-badge future">Long-Term · 2030+</div>
+        <h4>The Horizon</h4>
+        <ul class="rm-items">
+          <li class="s">AI Infrastructure Layer — Datasets, APIs, model deployment at scale</li>
+          <li class="s">African CV Datasets — Purpose-built, not repurposed</li>
+          <li class="s">Foundation models trained on African medical and environmental data</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NORTH STAR -->
+<div style="border-top:1px solid var(--navy-border);border-bottom:1px solid var(--navy-border);background:var(--navy-card);padding:52px 60px;">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;">
+    <div style="width:3px;height:72px;background:var(--accent);border-radius:2px;flex-shrink:0;"></div>
+    <div>
+      <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;">North Star</div>
+      <p style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2.2vw,1.55rem);font-weight:600;line-height:1.45;letter-spacing:-0.015em;color:var(--white);margin:0;">
+        CelesTium AI builds computer vision infrastructure that enables intelligent systems to perceive, interpret, and act on the physical world across Africa.
       </p>
-      <div class="hero-actions">
-        <a href="#work" class="btn-primary">
-          Explore Our Work
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </div>
+</div>
+
+<!-- VISION -->
+<section id="vision">
+  <div class="container">
+    <div class="vision-inner">
+      <div class="section-eyebrow" style="justify-content:center;">Vision</div>
+      <h2>Africa's future will be shaped by intelligent systems built for African realities</h2>
+      <div class="vision-bar"></div>
+      <p>For too long, AI infrastructure has been built for problems elsewhere — then adapted, often poorly, for African contexts. CelesTium AI takes the opposite approach: we start with African environments, African datasets, and African constraints.</p>
+      <p>Our mission is to build the computer vision layer that Africa's critical sectors need to operate intelligently — not as a future aspiration, but as work already in progress.</p>
+    </div>
+    <div class="vision-pillars">
+      <div class="pillar">
+        <div class="pillar-n">01</div>
+        <h4>Healthcare Diagnostics</h4>
+        <p>Machine-precision diagnostic assistance for clinicians in under-resourced settings — starting with malaria, expanding across infectious disease.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-n">02</div>
+        <h4>Transportation Intelligence</h4>
+        <p>Vision for African roads — where conditions, vehicles, and infrastructure differ fundamentally from where most models are trained.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-n">03</div>
+        <h4>AI Infrastructure</h4>
+        <p>The datasets, APIs, and deployment tools Africa's AI ecosystem needs — not just applications, but the layer others build upon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder">
+  <div class="container">
+    <div class="section-eyebrow">The Founder</div>
+    <div class="founder-layout">
+      <div class="founder-avatar">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <div>
+        <div class="founder-name">Gabriel Akoleaje</div>
+        <div class="founder-title">Founder, CelesTium AI</div>
+        <p class="founder-bio">Gabriel is a computer vision and AI engineer building intelligent perception systems for healthcare and transportation infrastructure. His work sits at the intersection of deep learning, medical imaging, and practical AI deployment — with a focus on building for African contexts from first principles rather than adapting solutions designed elsewhere.</p>
+        <p class="founder-bio">CelesTium AI is his vehicle for the long-term work: building the computer vision infrastructure that Africa's critical sectors need to operate intelligently.</p>
+        <div class="founder-tags">
+          <span class="ftag">Computer Vision</span>
+          <span class="ftag">Medical AI</span>
+          <span class="ftag">Deep Learning</span>
+          <span class="ftag">Dataset Engineering</span>
+          <span class="ftag">Edge AI</span>
+          <span class="ftag">Intelligent Transportation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="section-eyebrow" style="justify-content:center;">Get In Touch</div>
+      <h2>Work with CelesTium AI</h2>
+      <p>We're interested in partnerships with hospitals, government agencies, research institutions, and organizations building on African infrastructure.</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:14px;">
+        <a href="mailto:gabbywrld066@gmail.com" class="contact-email">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          gabbywrld066@gmail.com
         </a>
-        <a href="#contact" class="btn-secondary">Contact Us</a>
       </div>
-
-      <!-- Live detection demo -->
-      <div class="hero-visual">
-        <div class="scan-container">
-          <div class="scan-header">
-            <div class="scan-dot" style="background:#FF4D6D;"></div>
-            <div class="scan-dot" style="background:#F5C518;"></div>
-            <div class="scan-dot" style="background:#2ECC8A;"></div>
-            <div class="scan-label" style="margin-left:8px;"><strong>● LIVE</strong> Malaria Detection · Blood Smear Analysis</div>
-          </div>
-          <div class="scan-image-area">
-            <!-- Cell pattern background -->
-            <div class="scan-placeholder-cells">
-              <div class="scan-cell bright"></div><div class="scan-cell"></div><div class="scan-cell mid"></div><div class="scan-cell bright"></div><div class="scan-cell"></div><div class="scan-cell mid"></div><div class="scan-cell"></div><div class="scan-cell bright"></div><div class="scan-cell"></div><div class="scan-cell mid"></div><div class="scan-cell bright"></div><div class="scan-cell"></div>
-              <div class="scan-cell"></div><div class="scan-cell mid"></div><div class="scan-cell bright"></div><div class="scan-cell"></div><div class="scan-cell bright"></div><div class="scan-cell"></div><div class="scan-cell mid"></div><div class="scan-cell"></div><div class="scan-cell bright"></div><div class="scan-cell"></div><div class="scan-cell mid"></div><div class="scan-cell bright"></div>
-              <div class="scan-cell mid"></div><div class="scan-cell bright"></div><div class="scan-cell"></div><div class="scan-cell mid"></div><div class="scan-cell"></div><div class="scan-cell bright"></div><div class="scan-cell mid"></div><div class="scan-cell bright"></div><div class="scan-cell"></div><div class="scan-cell mid"></div><div class="scan-cell"></div><div class="scan-cell bright"></div>
-              <div class="scan-cell bright"></div><div class="scan-cell"></div><div class="scan-cell mid"></div><div class="scan-cell bright"></div><div class="scan-cell"></div><div class="scan-cell mid"></div><div class="scan-cell bright"></div><div class="scan-cell"></div><div class="scan-cell mid"></div><div class="scan-cell bright"></div><div class="scan-cell"></div><div class="scan-cell mid"></div>
-              <div class="scan-cell"></div><div class="scan-cell mid"></div><div class="scan-cell bright"></div><div class="scan-cell"></div><div class="scan-cell mid"></div><div class="scan-cell bright"></div><div class="scan-cell"></div><div class="scan-cell mid"></div><div class="scan-cell bright"></div><div class="scan-cell"></div><div class="scan-cell mid"></div><div class="scan-cell bright"></div>
-            </div>
-            <!-- Bounding boxes -->
-            <div class="det-box red box1"   data-label="P. falciparum 94.2%"></div>
-            <div class="det-box red box2"   data-label="P. falciparum 91.7%"></div>
-            <div class="det-box green box3" data-label="Healthy 97.1%"></div>
-            <div class="det-box red box4"   data-label="P. vivax 88.4%"></div>
-            <div class="det-box green box5" data-label="Healthy 99.0%"></div>
-            <!-- Scan line -->
-            <div class="scan-line"></div>
-          </div>
-          <div class="scan-stats">
-            <div class="scan-stat">
-              <div class="scan-stat-label">Cells Analyzed</div>
-              <div class="scan-stat-val">247</div>
-            </div>
-            <div class="scan-stat">
-              <div class="scan-stat-label">Infected Detected</div>
-              <div class="scan-stat-val red">38</div>
-            </div>
-            <div class="scan-stat">
-              <div class="scan-stat-label">Model Confidence</div>
-              <div class="scan-stat-val green">93.6%</div>
-            </div>
-          </div>
-        </div>
+      <div class="contact-chips">
+        <span class="chip">Hospitals & Clinics</span>
+        <span class="chip">Government Agencies</span>
+        <span class="chip">Research Institutions</span>
+        <span class="chip">Investors</span>
+        <span class="chip">Universities</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- WHAT WE BUILD -->
-  <section id="work">
-    <div class="container">
-      <div class="work-intro">
-        <div class="section-label">What We Build</div>
-        <h2>Intelligent systems for real-world problems</h2>
-        <p>We help machines understand the physical world — in clinics, on roads, and across critical infrastructure — starting with the problems that matter most in Africa.</p>
-      </div>
-      <div class="work-grid">
-
-        <!-- Healthcare AI -->
-        <div class="work-card">
-          <div class="work-card-icon">
-            <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
-          </div>
-          <h3>Healthcare AI</h3>
-          <p class="work-card-desc">AI-powered medical imaging and diagnostic assistance systems that improve speed, accuracy, and accessibility of clinical diagnostics.</p>
-          <div class="work-status">
-            <span class="status-tag active">Active</span>
-          </div>
-          <ul class="work-items">
-            <li><span class="dot"></span> Malaria Detection System</li>
-          </ul>
-          <div class="work-status" style="margin-top:20px;">
-            <span class="status-tag future">Upcoming</span>
-          </div>
-          <ul class="work-items">
-            <li class="future"><span class="dot"></span> Blood Cell Analysis</li>
-            <li class="future"><span class="dot"></span> Diagnostic Vision Systems</li>
-          </ul>
-        </div>
-
-        <!-- Transportation -->
-        <div class="work-card">
-          <div class="work-card-icon">
-            <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-          </div>
-          <h3>Intelligent Transportation</h3>
-          <p class="work-card-desc">Computer vision systems for African roads and mobility infrastructure — enabling smarter, safer, and more efficient transportation networks.</p>
-          <div class="work-status">
-            <span class="status-tag active">Active</span>
-          </div>
-          <ul class="work-items">
-            <li><span class="dot"></span> Automatic Number Plate Recognition (ANPR)</li>
-          </ul>
-          <div class="work-status" style="margin-top:20px;">
-            <span class="status-tag future">Upcoming</span>
-          </div>
-          <ul class="work-items">
-            <li class="future"><span class="dot"></span> Traffic Intelligence</li>
-            <li class="future"><span class="dot"></span> Smart Road Monitoring</li>
-            <li class="future"><span class="dot"></span> Vehicle Analytics</li>
-          </ul>
-        </div>
-
-        <!-- AI Infrastructure -->
-        <div class="work-card">
-          <div class="work-card-icon">
-            <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
-          </div>
-          <h3>AI Infrastructure</h3>
-          <p class="work-card-desc">Tools, datasets, and deployment systems that enable AI adoption across Africa — lowering the barrier for building with machine vision.</p>
-          <div class="work-status">
-            <span class="status-tag future">Upcoming</span>
-          </div>
-          <ul class="work-items">
-            <li class="future"><span class="dot"></span> African CV Datasets</li>
-            <li class="future"><span class="dot"></span> Model Deployment Pipelines</li>
-            <li class="future"><span class="dot"></span> Computer Vision APIs</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURED PROJECT -->
-  <section id="project">
-    <div class="container">
-      <div class="project-layout">
-        <div class="project-info">
-          <div class="section-label">Featured Project</div>
-          <h2>Malaria Detection System</h2>
-          <p>
-            A YOLOv8-based computer vision system trained on the BBBC041 dataset to detect and classify P. vivax parasite lifecycle stages in thick blood smear microscopy images — assisting clinical diagnostics in settings where trained microscopists are scarce.
-          </p>
-          <p>
-            The model classifies four infected cell stages — Ring, Trophozoite, Schizont, and Gametocyte — alongside healthy red blood cells, generating bounding boxes, confidence scores, and per-image diagnostic summaries.
-          </p>
-          <div class="project-meta">
-            <div class="project-meta-row">
-              <span class="meta-chip highlight">Computer Vision</span>
-              <span class="meta-chip highlight">Healthcare AI</span>
-              <span class="meta-chip">Object Detection</span>
-            </div>
-            <div class="project-meta-row">
-              <span class="meta-chip">YOLOv8</span>
-              <span class="meta-chip">BBBC041 Dataset</span>
-              <span class="meta-chip">P. vivax</span>
-              <span class="meta-chip">Clinical Reports</span>
-            </div>
-          </div>
-
-          <!-- Real training metrics -->
-          <div style="margin-top:32px; border:1px solid var(--navy-border); border-radius:8px; overflow:hidden;">
-            <div style="background:var(--navy-surface); padding:12px 18px; border-bottom:1px solid var(--navy-border); display:flex; align-items:center; gap:8px;">
-              <div style="width:7px;height:7px;border-radius:50%;background:var(--green);"></div>
-              <span style="font-family:var(--font-body);font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--white-dim);">Training Results · Verified Metrics</span>
-            </div>
-            <div style="padding:18px; display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--navy-border);">
-              <div style="background:var(--navy-card);padding:14px 18px;">
-                <div style="font-size:0.7rem;color:var(--white-dim);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Dataset</div>
-                <div style="font-family:var(--font-display);font-size:0.95rem;font-weight:600;color:var(--white);">BBBC041</div>
-              </div>
-              <div style="background:var(--navy-card);padding:14px 18px;">
-                <div style="font-size:0.7rem;color:var(--white-dim);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Training Images</div>
-                <div style="font-family:var(--font-display);font-size:0.95rem;font-weight:600;color:var(--white);">1,300+</div>
-              </div>
-              <div style="background:var(--navy-card);padding:14px 18px;">
-                <div style="font-size:0.7rem;color:var(--white-dim);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Detection Classes</div>
-                <div style="font-family:var(--font-display);font-size:0.95rem;font-weight:600;color:var(--white);">5 Classes</div>
-              </div>
-              <div style="background:var(--navy-card);padding:14px 18px;">
-                <div style="font-size:0.7rem;color:var(--white-dim);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">Epochs Trained</div>
-                <div style="font-family:var(--font-display);font-size:0.95rem;font-weight:600;color:var(--white);">50</div>
-              </div>
-              <div style="background:var(--navy-card);padding:14px 18px;">
-                <div style="font-size:0.7rem;color:var(--white-dim);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">mAP@50</div>
-                <div style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--green);">0.60+</div>
-              </div>
-              <div style="background:var(--navy-card);padding:14px 18px;">
-                <div style="font-size:0.7rem;color:var(--white-dim);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">mAP@50-95</div>
-                <div style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--green);">0.51+</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-visual">
-          <div class="project-mockup">
-            <div class="mockup-topbar">
-              <div class="mockup-dot" style="background:#FF4D6D;"></div>
-              <div class="mockup-dot" style="background:#F5C518;"></div>
-              <div class="mockup-dot" style="background:#2ECC8A;"></div>
-              <div style="margin-left:10px; font-size:0.72rem; color:var(--white-dim); font-family:var(--font-body);">
-                celestium_malaria_detector · example_analysis.json
-              </div>
-            </div>
-            <div class="mockup-body">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
-                <div style="font-size:0.72rem; color:var(--white-dim); font-family:var(--font-body); letter-spacing:0.05em; text-transform:uppercase;">Example Analysis · thick_smear_0042.jpg</div>
-                <span style="font-size:0.65rem;font-weight:600;color:var(--stone);background:rgba(196,185,154,0.1);border:1px solid rgba(196,185,154,0.2);padding:2px 7px;border-radius:3px;letter-spacing:0.06em;text-transform:uppercase;">Illustrative</span>
-              </div>
-              <div class="detection-result">
-                <div class="result-icon positive">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF4D6D" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
-                </div>
-                <div class="result-content">
-                  <div class="result-name">Cell #1 — Ring Stage</div>
-                  <div class="result-conf">Confidence: 91.4% · BBox [112, 67, 168, 122]</div>
-                  <div class="conf-bar"><div class="conf-fill high" style="width:91%;"></div></div>
-                  <span class="result-badge pos">Infected · Early Stage</span>
-                </div>
-              </div>
-              <div class="detection-result">
-                <div class="result-icon positive">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF4D6D" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
-                </div>
-                <div class="result-content">
-                  <div class="result-name">Cell #2 — Trophozoite</div>
-                  <div class="result-conf">Confidence: 87.6% · BBox [245, 89, 305, 149]</div>
-                  <div class="conf-bar"><div class="conf-fill high" style="width:88%;"></div></div>
-                  <span class="result-badge pos">Infected · Growing Stage</span>
-                </div>
-              </div>
-              <div class="detection-result">
-                <div class="result-icon negative">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2ECC8A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
-                </div>
-                <div class="result-content">
-                  <div class="result-name">Cell #3 — Healthy RBC</div>
-                  <div class="result-conf">Confidence: 96.8% · BBox [389, 110, 441, 162]</div>
-                  <div class="conf-bar"><div class="conf-fill low" style="width:97%;"></div></div>
-                  <span class="result-badge neg">Normal</span>
-                </div>
-              </div>
-              <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--navy-border); display:flex; gap:16px;">
-                <div style="flex:1; text-align:center;">
-                  <div style="font-family:var(--font-display); font-size:1.25rem; font-weight:700; color:#FF4D6D;">Ring</div>
-                  <div style="font-size:0.65rem; color:var(--white-dim); text-transform:uppercase; letter-spacing:0.07em; margin-top:2px;">Stage 1</div>
-                </div>
-                <div style="flex:1; text-align:center;">
-                  <div style="font-family:var(--font-display); font-size:1.25rem; font-weight:700; color:#FF8C42;">Troph.</div>
-                  <div style="font-size:0.65rem; color:var(--white-dim); text-transform:uppercase; letter-spacing:0.07em; margin-top:2px;">Stage 2</div>
-                </div>
-                <div style="flex:1; text-align:center;">
-                  <div style="font-family:var(--font-display); font-size:1.25rem; font-weight:700; color:#C94AFF;">Schiz.</div>
-                  <div style="font-size:0.65rem; color:var(--white-dim); text-transform:uppercase; letter-spacing:0.07em; margin-top:2px;">Stage 3</div>
-                </div>
-                <div style="flex:1; text-align:center;">
-                  <div style="font-family:var(--font-display); font-size:1.25rem; font-weight:700; color:#3B6FFF;">Gamet.</div>
-                  <div style="font-size:0.65rem; color:var(--white-dim); text-transform:uppercase; letter-spacing:0.07em; margin-top:2px;">Stage 4</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VISION -->
-  <section id="vision">
-    <div class="container">
-      <div class="vision-inner">
-        <div class="section-label" style="justify-content:center;">Our Vision</div>
-        <h2>Africa's future will be shaped by intelligent systems built for African realities</h2>
-        <div class="vision-divider"></div>
-        <p>
-          For too long, AI infrastructure has been built for problems elsewhere — then adapted, often poorly, for African contexts. CelesTium AI takes the opposite approach: we start with African environments, African datasets, and African constraints.
-        </p>
-        <p>
-          Our mission is to develop computer vision infrastructure that materially improves healthcare delivery, transportation safety, and critical services across the continent — not as a future aspiration, but as work already in progress.
-        </p>
-      </div>
-      <div class="vision-pillars">
-        <div class="pillar">
-          <div class="pillar-num">01</div>
-          <h4>Healthcare Diagnostics</h4>
-          <p>AI systems that give clinicians in under-resourced settings access to machine-precision diagnostic assistance — starting with malaria, expanding across infectious diseases.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">02</div>
-          <h4>Transportation Intelligence</h4>
-          <p>Computer vision for African roads — where road markings fade, vehicles vary widely, and formal infrastructure is limited. Built for the actual environment.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-num">03</div>
-          <h4>AI Infrastructure</h4>
-          <p>The datasets, APIs, and deployment tools that Africa's AI ecosystem needs to build on. Not just applications — the underlying layer that others can build upon.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ROADMAP -->
-  <section id="roadmap" style="border-top:1px solid var(--navy-border);">
-    <div class="container">
-      <div class="section-label">Roadmap</div>
-      <h2 style="margin-bottom:52px;">Where we're going</h2>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--navy-border);border:1px solid var(--navy-border);border-radius:10px;overflow:hidden;">
-
-        <div style="background:var(--navy-card);padding:36px 32px;">
-          <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);background:rgba(46,204,138,0.08);border:1px solid rgba(46,204,138,0.18);padding:5px 12px;border-radius:4px;margin-bottom:24px;">
-            <span style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;"></span>
-            Now · 2026
-          </div>
-          <h4 style="font-family:var(--font-display);font-size:1rem;font-weight:600;color:var(--white);margin-bottom:20px;">Active Work</h4>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;">
-            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.875rem;color:var(--white-dim);">
-              <span style="width:5px;height:5px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:7px;"></span>
-              Malaria Detection System (BBBC041 · P. vivax lifecycle stages)
-            </li>
-            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.875rem;color:var(--white-dim);">
-              <span style="width:5px;height:5px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:7px;"></span>
-              ANPR Research Platform (Automatic Number Plate Recognition)
-            </li>
-          </ul>
-        </div>
-
-        <div style="background:var(--navy-card);padding:36px 32px;">
-          <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);background:var(--accent-dim);border:1px solid rgba(59,111,255,0.2);padding:5px 12px;border-radius:4px;margin-bottom:24px;">
-            <span style="width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;"></span>
-            Next · 2027
-          </div>
-          <h4 style="font-family:var(--font-display);font-size:1rem;font-weight:600;color:var(--white);margin-bottom:20px;">In Development</h4>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;">
-            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.875rem;color:var(--white-dim);">
-              <span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:7px;"></span>
-              Clinical Vision Systems (Blood Cell Analysis, Diagnostic Pipelines)
-            </li>
-            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.875rem;color:var(--white-dim);">
-              <span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:7px;"></span>
-              Transportation Intelligence (Traffic monitoring, Vehicle analytics)
-            </li>
-            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.875rem;color:var(--white-dim);">
-              <span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:7px;"></span>
-              Smart Road Monitoring Systems
-            </li>
-          </ul>
-        </div>
-
-        <div style="background:var(--navy-card);padding:36px 32px;">
-          <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--stone);background:rgba(196,185,154,0.07);border:1px solid rgba(196,185,154,0.15);padding:5px 12px;border-radius:4px;margin-bottom:24px;">
-            <span style="width:6px;height:6px;border-radius:50%;background:var(--stone);display:inline-block;"></span>
-            Long-Term · 2030+
-          </div>
-          <h4 style="font-family:var(--font-display);font-size:1rem;font-weight:600;color:var(--white);margin-bottom:20px;">The Horizon</h4>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;">
-            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.875rem;color:var(--white-dim);">
-              <span style="width:5px;height:5px;border-radius:50%;background:var(--stone);flex-shrink:0;margin-top:7px;"></span>
-              AI Infrastructure Layer for Africa (Datasets, APIs, Deployment)
-            </li>
-            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.875rem;color:var(--white-dim);">
-              <span style="width:5px;height:5px;border-radius:50%;background:var(--stone);flex-shrink:0;margin-top:7px;"></span>
-              African Computer Vision Datasets — purpose-built, not repurposed
-            </li>
-            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.875rem;color:var(--white-dim);">
-              <span style="width:5px;height:5px;border-radius:50%;background:var(--stone);flex-shrink:0;margin-top:7px;"></span>
-              Foundation models trained on African medical and environmental data
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FOUNDER -->
-  <section id="founder">
-    <div class="container">
-      <div class="section-label">The Founder</div>
-      <div class="founder-layout">
-        <div class="founder-avatar">
-          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        </div>
-        <div>
-          <div class="founder-name">Gabriel Akoleaje</div>
-          <div class="founder-title">Founder, CelesTium AI</div>
-          <p class="founder-bio">
-            Gabriel is a computer vision and AI engineer exclusively focused on building intelligent systems for healthcare and transportation infrastructure. His work sits at the intersection of deep learning, medical imaging, and practical AI deployment — with a knack for building for African contexts from first principles rather than adapting solutions designed elsewhere.
-          </p>
-          <p class="founder-bio" style="margin-bottom:24px;">
-            CelesTium AI is his vehicle for the long-term work: building the computer vision layer that Africa's critical sectors need to operate intelligently.
-          </p>
-          <div class="founder-tags">
-            <span class="founder-tag">Computer Vision</span>
-            <span class="founder-tag">Medical AI</span>
-            <span class="founder-tag">Deep Learning</span>
-            <span class="founder-tag">Intelligent Transportation</span>
-            <span class="founder-tag">AI Infrastructure</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <div class="contact-inner">
-        <div class="section-label" style="justify-content:center;">Get In Touch</div>
-        <h2>Work with CelesTium AI</h2>
-        <p>We're interested in partnerships with hospitals, government agencies, research institutions, and organizations working on infrastructure challenges across Africa.</p>
-        <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
-          <a href="mailto:hello@celestiumai.com" class="contact-email">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            gabbywrld066@gmail.com
-          </a>
-        </div>
-        <div class="contact-areas">
-          <span class="contact-area">Hospitals & Clinics</span>
-          <span class="contact-area">Government Agencies</span>
-          <span class="contact-area">Research Institutions</span>
-          <span class="contact-area">Investors</span>
-          <span class="contact-area">Universities</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo">Celes<span>Tium</span> AI</div>
-    <div style="display:flex;align-items:center;gap:24px;">
-      <a href="https://github.com/King-Gabby" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:7px;font-size:0.82rem;color:var(--white-dim);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--white-dim)'">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        GitHub
-      </a>
-      <a href="https://linkedin.com/in/gabriel-akoleaje" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:7px;font-size:0.82rem;color:var(--white-dim);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--white-dim)'">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-      <a href="mailto:gabbywrld066@gmail.com" style="display:flex;align-items:center;gap:7px;font-size:0.82rem;color:var(--white-dim);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--white-dim)'">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        Email
-      </a>
-    </div>
-    <div class="footer-note">© 2026 CelesTium AI · Lagos, Nigeria</div>
-  </footer>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Celes<span>Tium</span> AI</div>
+  <div class="footer-links">
+    <a href="https://github.com/King-Gabby" target="_blank" rel="noopener" class="footer-link">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      GitHub
+    </a>
+    <a href="https://linkedin.com/in/gabriel-akoleaje" target="_blank" rel="noopener" class="footer-link">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      LinkedIn
+    </a>
+    <a href="mailto:gabbywrld066@gmail.com" class="footer-link">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Email
+    </a>
+  </div>
+  <div class="footer-copy">© 2026 CelesTium AI · Lagos, Nigeria</div>
+</footer>
 
 </body>
 </html>
